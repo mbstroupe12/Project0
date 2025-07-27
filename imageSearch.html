@@ -3,31 +3,34 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Google</title>
+        <title>Google Images</title>
         <link rel="icon" type="image/x-icon" href="https://www.google.com/favicon.ico">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
         <link rel="stylesheet" href="SCSS/styles.css">
+        <link rel="stylesheet" href="SCSS/imageSearch.css">
     </head>
     <body>
         <!-- Top navigation -->
         <nav class="position-absolute top-0 end-0 p-3">
             <div class="d-flex">
-                <a href="imageSearch.html" class="nav-link">Images</a>
-                <a href="advancedSearch.html" class="nav-link">Advanced</a>
+                <a href="index.html" class="nav-link">Search</a>
             </div>
         </nav>
 
         <!-- Body -->
         <div class="container-fluid d-flex flex-column justify-content-center align-items-center min-vh-100 px-3">
-            <img src="logo.png" alt="Google Logo" class="img-fluid mb-4" style="max-width: 300px;">
+            <div class="position-relative d-inline-block">
+                <img src="logo.png" alt="Google Logo" class="img-fluid mb-4" style="max-width: 300px;">
+                <span class="img-text">Images</span>
+            </div>
             <form id="searchForm" action="https://google.com/search" method="GET" class="text-center w-100" style="max-width: 726px;">
+                <input type="hidden" name="tbm" value="isch">
                 <div class="mb-3 position-relative">
                     <i class="bi bi-search position-absolute" style="left: 15px; top: 50%; transform: translateY(-50%); color: #6c757d;"></i>
                     <input type="text" name="q" id="searchInput" aria-label="Search input" class="form-control rounded-pill search-input" style="padding-left: 45px;">
                 </div>
                 <button type="submit" id="googleSearch" class="btn btn-gray">Google Search</button>
-                <button type="button" id="feelingLucky" class="btn btn-gray">I'm Feeling Lucky</button>
             </form>
         </div>
 
@@ -38,17 +41,6 @@
                     e.preventDefault();
                     return false;
                 }
-            });
-
-            document.getElementById('feelingLucky').addEventListener('click', function() {
-                const searchInput = document.getElementById('searchInput');
-                const query = searchInput.value.trim();
-
-                if (query === '') {
-                    return false;
-                }
-
-                window.location.href = `https://www.google.com/search?q=${encodeURIComponent(query)}&btnI=1`;
             });
         </script>
     </body>
