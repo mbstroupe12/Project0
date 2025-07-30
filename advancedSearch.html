@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="SCSS/advancedSearch.css">
 </head>
 <body>
-<!-- Header -->
 <div class="header d-flex justify-content-between align-items-center">
     <div>
         <a href="index.html" class="google-logo text-decoration-none">
@@ -22,75 +21,110 @@
     </div>
 </div>
 
-<!-- Content -->
 <div class="content">
     <h1 class="section-title">Advanced Search</h1>
-
     <form action="https://google.com/search" method="GET">
-        <!-- Find pages with -->
         <div class="section-divider">
-
             <div class="row">
                 <div class="col-8">
                     <h3 class="subsection-title">Find pages with...</h3>
                 </div>
                 <div class="col-4">
-                    <p class="helper-text-header" style="font-weight: bold; transform: translateX(-5%);">To do this in
-                        the search box</p>
+                    <p class="helper-text-header" style="font-weight: bold; transform: translateX(-20px);">To do this in the search box</p>
                 </div>
+            </div>
+
+            <div class="row align-items-center mb-2">
                 <div class="col-8">
-                    <div class="form-group row form-row">
-                        <label for="as_q" class="col-sm-3 col-form-label col-form-label-sm">all these words:</label>
-                        <div class="col-sm-9">
+                    <div class="row">
+                        <label for="as_q" class="form-label-fixed col-3 col-form-label col-form-label-sm">all these words:</label>
+                        <div class="col-9">
                             <input type="text" class="form-control form-control-sm form-input" id="as_q" name="as_q">
                         </div>
                     </div>
                 </div>
-                <div class="col-4">
-                    <span class="helper-text">Type the important words: </span><span class="helper-text-example">  tricolor rat terrier</span>
-                </div>
-                <div class="col-8">
-                    <div class="form-group row form-row">
-                        <label for="as_epq" class="col-sm-3 col-form-label col-form-label-sm">this exact word or
-                            phrase:</label>
-                        <div class="col-sm-9">
-                            <input type="text" class="form-control form-control-sm form-input" id="as_epq"
-                                   name="as_epq">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <span class="helper-text">Put exact words in quotes: </span><span class="helper-text-example">  "rat terrier"</span>
+                <div class="col-4 d-flex align-items-center">
+                    <span class="helper-text">Type the important words:</span>
+                    <span class="helper-text-example">  tricolor rat terrier</span>
                 </div>
             </div>
 
-
-            <!--
-                <div class="form-row">
-                    <div class="form-label">all these words:</div>
-                    <input type="text" name="as_q" class="form-input">
+            <div class="row align-items-center mb-2">
+                <div class="col-8">
+                    <div class="row">
+                        <label for="as_epq" class="form-label-fixed col-3 col-form-label col-form-label-sm">this exact word or phrase:</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control form-control-sm form-input" id="as_epq" name="as_epq">
+                        </div>
+                    </div>
                 </div>
-
-                <div class="form-row">
-                    <div class="form-label">this exact word or phrase:</div>
-                    <input type="text" name="as_epq" class="form-input">
+                <div class="col-4 d-flex align-items-center">
+                    <span class="helper-text">Put exact words in quotes:</span>
+                    <span class="helper-text-example">  "rat terrier"</span>
                 </div>
+            </div>
 
-                <div class="form-row">
-                    <div class="form-label">any of these words:</div>
-                    <input type="text" name="as_oq" class="form-input">
+            <div class="row align-items-center mb-2">
+                <div class="col-8">
+                    <div class="row">
+                        <label for="as_oq" class="form-label-fixed col-3 col-form-label col-form-label-sm">any of these words:</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control form-control-sm form-input" id="as_oq" name="as_oq">
+                        </div>
+                    </div>
                 </div>
+                <div class="col-4 d-flex align-items-center">
+                    <span class="helper-text">Type OR between all the words you want:</span>
+                    <span class="helper-text-example">  miniature OR standard</span>
+                </div>
+            </div>
 
-                <div class="form-row">
-                    <div class="form-label">none of these words:</div>
-                    <input type="text" name="as_eq" class="form-input">-->
+            <div class="row align-items-center mb-2">
+                <div class="col-8">
+                    <div class="row">
+                        <label for="as_eq" class="form-label-fixed col-3 col-form-label col-form-label-sm">none of these words:</label>
+                        <div class="col-9">
+                            <input type="text" class="form-control form-control-sm form-input" id="as_eq" name="as_eq">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 d-flex align-items-center">
+                    <div class="row">
+                        <span class="helper-text col-12">Put a minus sign just before words you don't want:</span>
+                        <span class="helper-text-example col-12">-rodent, -"Jack Russell"</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row align-items-center mb-2">
+                <div class="col-8">
+                    <div class="row">
+                        <label for="as_nlo" class="form-label-fixed col-3 col-form-label col-form-label-sm">numbers ranging from:</label>
+                        <div class="col-4">
+                            <input type="text" class="form-control form-control-sm form-input" id="as_nlo" name="as_nlo">
+                        </div>
+                        <div class="col-1 d-flex align-items-center justify-content-center">
+                            <span class="col-form-label-sm">to</span>
+                        </div>
+                        <div class="col-4">
+                            <input type="text" class="form-control form-control-sm form-input" id="as_nhi" name="as_nhi">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 d-flex align-items-center">
+                    <div class="row">
+                        <span class="helper-text col-12">Put 2 periods between the numbers and add a unit of measure:</span>
+                        <span class="helper-text-example col-12">10..35 lb, $300..$500, 2010..2011</span>
+                    </div>
+
+                </div>
+            </div>
         </div>
-        <!-- Submit button -->
         <div class="submit-section">
             <button type="submit" class="btn-advanced">Advanced Search</button>
         </div>
-
     </form>
+
 </div>
 </body>
 </html>
