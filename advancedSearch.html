@@ -10,17 +10,15 @@
     <link rel="stylesheet" href="SCSS/advancedSearch.css">
 </head>
 <body>
+<!-- Top navigation -->
 <div class="header d-flex justify-content-between align-items-center">
-    <div>
-        <a href="index.html" class="google-logo text-decoration-none">
-            <img src="logo.png" alt="Google" style="height: 24px; vertical-align: middle;">
-        </a>
-    </div>
-    <div>
-        <a href="index.html" class="nav-link">Google Search</a>
-    </div>
+    <a href="index.html">
+        <img src="logo.png" alt="Google" style="height: 24px; vertical-align: middle;">
+    </a>
+    <a href="index.html" class="nav-link">Google Search</a>
 </div>
 
+<!-- Body -->
 <div class="content">
     <h1 class="section-title">Advanced Search</h1>
     <form action="https://google.com/search" method="GET">
@@ -30,14 +28,16 @@
                     <h3 class="subsection-title">Find pages with...</h3>
                 </div>
                 <div class="col-4">
-                    <p class="helper-text-header" style="font-weight: bold; transform: translateX(-20px);">To do this in the search box</p>
+                    <p class="helper-text-header" style="font-weight: bold; transform: translateX(-20px);">To do this in
+                        the search box</p>
                 </div>
             </div>
 
-            <div class="row align-items-center mb-2">
+            <div class="row align-items-center mb-3">
                 <div class="col-8">
                     <div class="row">
-                        <label for="as_q" class="form-label-fixed col-3 col-form-label col-form-label-sm">all these words:</label>
+                        <label for="as_q" class="form-label-fixed col-3 col-form-label col-form-label-sm">all these
+                            words:</label>
                         <div class="col-9">
                             <input type="text" class="form-control form-control-sm form-input" id="as_q" name="as_q">
                         </div>
@@ -49,12 +49,14 @@
                 </div>
             </div>
 
-            <div class="row align-items-center mb-2">
+            <div class="row align-items-center mb-3">
                 <div class="col-8">
                     <div class="row">
-                        <label for="as_epq" class="form-label-fixed col-3 col-form-label col-form-label-sm">this exact word or phrase:</label>
+                        <label for="as_epq" class="form-label-fixed col-3 col-form-label col-form-label-sm">this exact
+                            word or phrase:</label>
                         <div class="col-9">
-                            <input type="text" class="form-control form-control-sm form-input" id="as_epq" name="as_epq">
+                            <input type="text" class="form-control form-control-sm form-input" id="as_epq"
+                                   name="as_epq">
                         </div>
                     </div>
                 </div>
@@ -64,10 +66,11 @@
                 </div>
             </div>
 
-            <div class="row align-items-center mb-2">
+            <div class="row align-items-center mb-3">
                 <div class="col-8">
                     <div class="row">
-                        <label for="as_oq" class="form-label-fixed col-3 col-form-label col-form-label-sm">any of these words:</label>
+                        <label for="as_oq" class="form-label-fixed col-3 col-form-label col-form-label-sm">any of these
+                            words:</label>
                         <div class="col-9">
                             <input type="text" class="form-control form-control-sm form-input" id="as_oq" name="as_oq">
                         </div>
@@ -79,10 +82,11 @@
                 </div>
             </div>
 
-            <div class="row align-items-center mb-2">
+            <div class="row align-items-center mb-3">
                 <div class="col-8">
                     <div class="row">
-                        <label for="as_eq" class="form-label-fixed col-3 col-form-label col-form-label-sm">none of these words:</label>
+                        <label for="as_eq" class="form-label-fixed col-3 col-form-label col-form-label-sm">none of these
+                            words:</label>
                         <div class="col-9">
                             <input type="text" class="form-control form-control-sm form-input" id="as_eq" name="as_eq">
                         </div>
@@ -96,18 +100,21 @@
                 </div>
             </div>
 
-            <div class="row align-items-center mb-2">
+            <div class="row align-items-center mb-3">
                 <div class="col-8">
                     <div class="row">
-                        <label for="as_nlo" class="form-label-fixed col-3 col-form-label col-form-label-sm">numbers ranging from:</label>
+                        <label for="as_nlo" class="form-label-fixed col-3 col-form-label col-form-label-sm">numbers
+                            ranging from:</label>
                         <div class="col-4">
-                            <input type="text" class="form-control form-control-sm form-input" id="as_nlo" name="as_nlo">
+                            <input type="text" class="form-control form-control-sm form-input" id="as_nlo"
+                                   name="as_nlo">
                         </div>
                         <div class="col-1 d-flex align-items-center justify-content-center">
                             <span class="col-form-label-sm">to</span>
                         </div>
                         <div class="col-4">
-                            <input type="text" class="form-control form-control-sm form-input" id="as_nhi" name="as_nhi">
+                            <input type="text" class="form-control form-control-sm form-input" id="as_nhi"
+                                   name="as_nhi">
                         </div>
                     </div>
                 </div>
@@ -116,15 +123,16 @@
                         <span class="helper-text col-12">Put 2 periods between the numbers and add a unit of measure:</span>
                         <span class="helper-text-example col-12">10..35 lb, $300..$500, 2010..2011</span>
                     </div>
+                </div>
+            </div>
 
+            <div class="row align-items-center mb-2">
+                <div class="col-8 d-flex justify-content-end">
+                    <button type="submit" class="btn-advanced">Advanced Search</button>
                 </div>
             </div>
         </div>
-        <div class="submit-section">
-            <button type="submit" class="btn-advanced">Advanced Search</button>
-        </div>
     </form>
-
 </div>
 </body>
 </html>
